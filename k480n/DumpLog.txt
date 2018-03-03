@@ -1,0 +1,69 @@
+9:983  5:806  Found BIOS RSDP at F0450
+9:983  0:000  Saving ACPI tables from RSDP F0450 to EFI\CLOVER\ACPI\origin ...
+9:983  0:000   F0450: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+10:727  0:744    (Xsdt: CA941080, Rsdt: CA941028)
+10:727  0:000    CA941080: 'XSDT', 'PE_SC3', Rev: 1, Len: 108 -> XSDT.aml
+11:429  0:701    CA941028: 'RSDT', 'PE_SC3', Rev: 1, Len: 72 -> RSDT.aml
+12:134  0:705    Tables in Xsdt: 9
+12:134  0:000    0. CA955ED8: 'FACP', 'PE_SC3', Rev: 4, Len: 244 -> FACP.aml
+12:839  0:704        (Dsdt: CA941180, Facs: CA980F80, XDsdt: CA941180, XFacs: 0)
+12:839  0:000        CA941180: 'DSDT', 'PE_SC3', Rev: 2, Len: 85333 -> DSDT.aml
+13:585  0:745        CA980F80: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+14:296  0:711    1. CA955FD0: 'APIC', 'PE_SC3', Rev: 3, Len: 114 -> APIC.aml
+15:003  0:707    2. CA956048: 'ECDT', 'PE_SC3', Rev: 1, Len: 193 -> ECDT.aml
+15:774  0:770    3. CA956110: 'MCFG', 'PE_SC3', Rev: 1, Len: 60 -> MCFG.aml
+16:486  0:712    4. CA956150: 'SLIC', 'PE_SC3', Rev: 1, Len: 374 -> SLIC.aml
+17:188  0:701    5. CA9562C8: 'HPET', 'PE_SC3', Rev: 1, Len: 56 -> HPET.aml
+17:906  0:717    6. CA956300: 'SSDT', 'PE_SC3', Rev: 1, Len: 877 -> SSDT-0-PE_SC3.aml
+18:619  0:713    7. CA956670: 'SSDT', 'PE_SC3', Rev: 1, Len: 2438 -> SSDT-1-PE_SC3.aml
+19:327  0:708    8. CA956FF8: 'SSDT', 'PE_SC3', Rev: 1, Len: 2706 -> SSDT-2-PE_SC3.aml (Found hidden SSDT 4 pcs)
+20:109  0:781        * 16DD018: 'SSDT', 'PE_SC3', Rev: 1, Len: 2706  53 53 44 54 92 0A 00 00 01 29 44 45 4C 4C 20 20 Internal length = 2706 -> SSDT-x2_0-PE_SC3.aml
+20:809  0:699        * CA6B1A98: 'SSDT', 'ApIst', Rev: 1, Len: 771  53 53 44 54 03 03 00 00 01 76 50 6D 52 65 66 00 Internal length = 771 -> SSDT-x2_1-ApIst.aml
+21:529  0:720        * CA6B0018: 'SSDT', 'Cpu0Cst', Rev: 1, Len: 2011  53 53 44 54 DB 07 00 00 01 E4 50 6D 52 65 66 00 Internal length = 2011 -> SSDT-x2_2-Cpu0Cst.aml
+22:245  0:715        * CA6B2C18: 'SSDT', 'ApCst', Rev: 1, Len: 281  53 53 44 54 19 01 00 00 01 EC 50 6D 52 65 66 00 Internal length = 281 -> SSDT-x2_3-ApCst.aml
+22:949  0:704  
+22:949  0:000    Tables in Rsdt: 9
+22:949  0:000    0. CA9410F8: 'FACP', 'PE_SC3', Rev: 2, Len: 132 -> RSDT-FACP.aml
+23:651  0:701        (Dsdt: CA941180, Facs: CA980F40)
+23:651  0:000        CA941180: 'DSDT', 'PE_SC3', Rev: 2, Len: 85333
+23:653  0:002        CA980F40: 'FACS', Ver: 0, Len: 64 -> RSDT-FACS.aml
+24:362  0:708    1. CA955FD0: 'APIC', 'PE_SC3', Rev: 3, Len: 114
+24:362  0:000    2. CA956048: 'ECDT', 'PE_SC3', Rev: 1, Len: 193
+24:362  0:000    3. CA956110: 'MCFG', 'PE_SC3', Rev: 1, Len: 60
+24:362  0:000    4. CA956150: 'SLIC', 'PE_SC3', Rev: 1, Len: 374
+24:362  0:000    5. CA9562C8: 'HPET', 'PE_SC3', Rev: 1, Len: 56
+24:362  0:000    6. CA956300: 'SSDT', 'PE_SC3', Rev: 1, Len: 877
+24:362  0:000    7. CA956670: 'SSDT', 'PE_SC3', Rev: 1, Len: 2438
+24:362  0:000    8. CA956FF8: 'SSDT', 'PE_SC3', Rev: 1, Len: 2706
+24:362  0:000  Found UEFI Acpi 2.0 RSDP at 1FEEA000
+24:362  0:000  Printing ACPI tables from RSDP 1FEEA000 ...
+24:362  0:000   1FEEA000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+24:362  0:000    (Xsdt: CA941080, Rsdt: CA941028)
+24:362  0:000    CA941080: 'XSDT', 'PE_SC3', Rev: 1, Len: 108
+24:362  0:000    CA941028: 'RSDT', 'PE_SC3', Rev: 1, Len: 72
+24:362  0:000    Tables in Xsdt: 9
+24:362  0:000    0. CA955ED8: 'FACP', 'PE_SC3', Rev: 4, Len: 244
+24:362  0:000        (Dsdt: CA941180, Facs: CA980F80, XDsdt: CA941180, XFacs: 0)
+24:362  0:000        CA941180: 'DSDT', 'PE_SC3', Rev: 2, Len: 85333
+24:364  0:002        CA980F80: 'FACS', Ver: 2, Len: 64
+24:364  0:000    1. CA955FD0: 'APIC', 'PE_SC3', Rev: 3, Len: 114
+24:364  0:000    2. CA956048: 'ECDT', 'PE_SC3', Rev: 1, Len: 193
+24:364  0:000    3. CA956110: 'MCFG', 'PE_SC3', Rev: 1, Len: 60
+24:364  0:000    4. CA956150: 'SLIC', 'PE_SC3', Rev: 1, Len: 374
+24:364  0:000    5. CA9562C8: 'HPET', 'PE_SC3', Rev: 1, Len: 56
+24:364  0:000    6. CA956300: 'SSDT', 'PE_SC3', Rev: 1, Len: 877
+24:364  0:000    7. CA956670: 'SSDT', 'PE_SC3', Rev: 1, Len: 2438
+24:364  0:000    8. CA956FF8: 'SSDT', 'PE_SC3', Rev: 1, Len: 2706
+24:364  0:000    Tables in Rsdt: 9
+24:364  0:000    0. CA9410F8: 'FACP', 'PE_SC3', Rev: 2, Len: 132
+24:364  0:000        (Dsdt: CA941180, Facs: CA980F40)
+24:364  0:000        CA941180: 'DSDT', 'PE_SC3', Rev: 2, Len: 85333
+24:366  0:002        CA980F40: 'FACS', Ver: 0, Len: 64
+24:366  0:000    1. CA955FD0: 'APIC', 'PE_SC3', Rev: 3, Len: 114
+24:366  0:000    2. CA956048: 'ECDT', 'PE_SC3', Rev: 1, Len: 193
+24:366  0:000    3. CA956110: 'MCFG', 'PE_SC3', Rev: 1, Len: 60
+24:366  0:000    4. CA956150: 'SLIC', 'PE_SC3', Rev: 1, Len: 374
+24:366  0:000    5. CA9562C8: 'HPET', 'PE_SC3', Rev: 1, Len: 56
+24:366  0:000    6. CA956300: 'SSDT', 'PE_SC3', Rev: 1, Len: 877
+24:366  0:000    7. CA956670: 'SSDT', 'PE_SC3', Rev: 1, Len: 2438
+24:366  0:000    8. CA956FF8: 'SSDT', 'PE_SC3', Rev: 1, Len: 2706

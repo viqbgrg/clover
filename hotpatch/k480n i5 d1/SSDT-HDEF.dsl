@@ -11,7 +11,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_HDEF", 0)
     Device(_SB.PCI0.HDEF)
     {
         Name(_ADR, 0x001b0000)
-        Name(_PRW, Package() { 0x0d, 0x05 }) // may need tweaking (or not needed)
+        Name(GPRW, Package() { 0x0d, 0x05 }) // may need tweaking (or not needed)
     }
 
     // inject properties for audio

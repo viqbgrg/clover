@@ -5,11 +5,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
     External(ZPTS, MethodObj)
     External(ZWAK, MethodObj)
 
-    External(_SB.PCI0.PEG0.PEGP._ON, MethodObj)
-    External(_SB.PCI0.PEG0.PEGP._OFF, MethodObj)
-    External(_SB.PCI0.PEGP.DGFX._ON, MethodObj)
-    External(_SB.PCI0.PEGP.DGFX._OFF, MethodObj)
-
+    External(RMD1._ON, MethodObj)
+    External(RMD1._OFF, MethodObj)
+    
+    External(RMDT.PUSH, MethodObj)    // 1 Arguments (from opcode)
+    External(RMDT.P2__, MethodObj)
+    
     External(RMCF.DPTS, IntObj)
     External(RMCF.SHUT, IntObj)
     External(RMCF.XPEE, IntObj)
@@ -19,51 +20,29 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
     // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
     // As a result, calls to these methods land here.
-    Method(_PTS, 1)
+    Method(_PTS, 1, NotSerialized)
     {
-        if (5 == Arg0)
+        \RMDT.P2("_PTS", Arg0)
+        If (LEqual (Arg0, 0x05)) {}
+        Else
         {
-            // Shutdown fix, if enabled
-            If (CondRefOf(\RMCF.SHUT))
+            If (CondRefOf(\RMCF.DPTS))
             {
-                If (\RMCF.SHUT & 1) { Return }
-                If (\RMCF.SHUT & 2)
+            If (\RMCF.DPTS)
                 {
-                    OperationRegion(PMRS, SystemIO, 0x1830, 1)
-                    Field(PMRS, ByteAcc, NoLock, Preserve)
-                    {
-                        ,4,
-                        SLPE, 1,
-                    }
-                    // alternate shutdown fix using SLPE (mostly provided as an example)
-                    // likely very specific to certain motherboards
-                    Store(0, SLPE)
-                    Sleep(16)
+                    \RMDT.PUSH ("_PTS RMD1._ON")
+                    // enable discrete graphics
+                    \RMD1._ON()
                 }
             }
-        }
-
-        If (CondRefOf(\RMCF.DPTS))
-        {
-            If (\RMCF.DPTS)
-            {
-                // enable discrete graphics
-                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._ON)) { \_SB.PCI0.PEG0.PEGP._ON() }
-                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._ON)) { \_SB.PCI0.PEGP.DGFX._ON() }
-            }
-        }
-
-        // call into original _PTS method
-        ZPTS(Arg0)
-
-        If (5 == Arg0)
-        {
-            // XHC.PMEE fix, if enabled
-            If (CondRefOf(\RMCF.XPEE)) { If (\RMCF.XPEE && CondRefOf(\_SB.PCI0.XHC.PMEE)) { \_SB.PCI0.XHC.PMEE = 0 } }
+            
+            // call into original _PTS method
+            //ZPTS(Arg0)
         }
     }
-    Method(_WAK, 1)
+    Method(_WAK, 1, Serialized)
     {
+        \RMDT.P2("_WAK", Arg0)
         // Take care of bug regarding Arg0 in certain versions of OS X...
         // (starting at 10.8.5, confirmed fixed 10.10.2)
         If (Arg0 < 1 || Arg0 > 5) { Arg0 = 3 }
@@ -76,8 +55,8 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             If (\RMCF.DPTS)
             {
                 // disable discrete graphics
-                If (CondRefOf(\_SB.PCI0.PEG0.PEGP._OFF)) { \_SB.PCI0.PEG0.PEGP._OFF() }
-                If (CondRefOf(\_SB.PCI0.PEGP.DGFX._OFF)) { \_SB.PCI0.PEGP.DGFX._OFF() }
+                \RMD1._OFF()
+                \RMDT.PUSH ("_WAK RMD1._WAK")
             }
         }
 

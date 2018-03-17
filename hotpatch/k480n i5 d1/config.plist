@@ -285,7 +285,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>chang return VGA to IGPU </string>
+					<string>change return VGA to IGPU </string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -295,6 +295,20 @@
 					<key>Replace</key>
 					<data>
 					Xl4vA0lHUFU=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change PTS_ to PTSX</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					UFRTX2g=
+					</data>
+					<key>Replace</key>
+					<data>
+					UFRTWGg=
 					</data>
 				</dict>
 			</array>

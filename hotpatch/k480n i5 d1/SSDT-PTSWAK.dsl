@@ -17,6 +17,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
     External(RMCF.SSTF, IntObj)
     External(_SB.PCI0.XHC.PMEE, FieldUnitObj)
     External(_SI._SST, MethodObj)
+    External(_SB.PCI0.NPTS, MethodObj)
+    External(_SB.PCI0.IGPU.OPTS, MethodObj)
+    External(_SB.PCI0.RP00.VGA.OPTS, MethodObj)
+    External(WMI0.GENS, MethodObj)
+
 
     // In DSDT, native _PTS and _WAK are renamed ZPTS/ZWAK
     // As a result, calls to these methods land here.
@@ -37,7 +42,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             }
             
             // call into original _PTS method
-            //ZPTS(Arg0)
+            ZPTS(Arg0)
         }
     }
     Method(_WAK, 1, Serialized)
@@ -72,6 +77,17 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
         // return value from original _WAK
         Return (Local0)
+    }
+    Method (PTSX, 1, NotSerialized)
+    {
+        \RMDT.P2("PTSX", Arg0)
+        If (Arg0)
+        {
+            \_SB.PCI0.NPTS (Arg0)
+            \_SB.PCI0.IGPU.OPTS (Arg0)
+            \WMI0.GENS (Arg0)
+            \_SB.PCI0.RP00.VGA.OPTS (Arg0)
+        }
     }
 }
 //EOF

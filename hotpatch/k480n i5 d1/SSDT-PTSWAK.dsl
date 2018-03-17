@@ -7,10 +7,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
 
     External(RMD1._ON, MethodObj)
     External(RMD1._OFF, MethodObj)
-    
-    External(RMDT.PUSH, MethodObj)    // 1 Arguments (from opcode)
-    External(RMDT.P2__, MethodObj)
-    
     External(RMCF.DPTS, IntObj)
     External(RMCF.SHUT, IntObj)
     External(RMCF.XPEE, IntObj)
@@ -27,7 +23,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
     // As a result, calls to these methods land here.
     Method(_PTS, 1, NotSerialized)
     {
-        \RMDT.P2("_PTS", Arg0)
         If (LEqual (Arg0, 0x05)) {}
         Else
         {
@@ -35,7 +30,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             {
             If (\RMCF.DPTS)
                 {
-                    \RMDT.PUSH ("_PTS RMD1._ON")
                     // enable discrete graphics
                     \RMD1._ON()
                 }
@@ -47,7 +41,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
     }
     Method(_WAK, 1, Serialized)
     {
-        \RMDT.P2("_WAK", Arg0)
         // Take care of bug regarding Arg0 in certain versions of OS X...
         // (starting at 10.8.5, confirmed fixed 10.10.2)
         If (Arg0 < 1 || Arg0 > 5) { Arg0 = 3 }
@@ -61,7 +54,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
             {
                 // disable discrete graphics
                 \RMD1._OFF()
-                \RMDT.PUSH ("_WAK RMD1._WAK")
             }
         }
 
@@ -80,7 +72,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "_PTSWAK", 0)
     }
     Method (PTSX, 1, NotSerialized)
     {
-        \RMDT.P2("PTSX", Arg0)
         If (Arg0)
         {
             \_SB.PCI0.NPTS (Arg0)

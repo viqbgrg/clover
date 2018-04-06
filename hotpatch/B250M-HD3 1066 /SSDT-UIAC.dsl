@@ -28,9 +28,9 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
             {
                 // these values from iMac17,1
                 "kUSBSleepPortCurrentLimit", 2100,
-                "kUSBSleepPowerSupply", 2600,
+                "kUSBSleepPowerSupply", 5100,
                 "kUSBWakePortCurrentLimit", 2100,
-                "kUSBWakePowerSupply", 3200,
+                "kUSBWakePowerSupply", 5100,
             })
         }
     }

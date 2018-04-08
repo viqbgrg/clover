@@ -43,7 +43,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
         {
             "8086_a12f", Package()
             {
-                "port-count", Buffer() { 26, 0, 0, 0 },
+                "port-count", Buffer() { 10, 0, 0, 0 },
                 "ports", Package()
                 {
                     "HS01", Package()
@@ -54,48 +54,49 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
                     "HS03", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 2, 0, 0, 0 },
+                        "port", Buffer() { 3, 0, 0, 0 },
                     },
                     "HS04", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 3, 0, 0, 0 },
+                        "port", Buffer() { 4, 0, 0, 0 },
                     },
                     "HS07", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 4, 0, 0, 0 },
+                        "port", Buffer() { 7, 0, 0, 0 },
                     },
                     "HS08", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 5, 0, 0, 0 },
+                        "port", Buffer() { 8, 0, 0, 0 },
                     },
                     "HS09", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 6, 0, 0, 0 },
+                        "port", Buffer() { 9, 0, 0, 0 },
                     },
                     "HS10", Package()
                     {
                         "UsbConnector", 0,
-                        "port", Buffer() { 7, 0, 0, 0 },
+                        "port", Buffer() { 10, 0, 0, 0 },
                     },
                     "SS01", Package()
                     {
                         "UsbConnector", 3,
-                        "port", Buffer() { 8, 0, 0, 0 },
+                        "port", Buffer() { 17, 0, 0, 0 },
                     },
                     "SS03", Package()
                     {
                         "UsbConnector", 3,
-                        "port", Buffer() { 9, 0, 0, 0 },
+                        "port", Buffer() { 19, 0, 0, 0 },
                     },
                     "SS04", Package()
                     {
                         "UsbConnector", 3,
-                        "port", Buffer() { 10, 0, 0, 0 },
-                    },                },
+                        "port", Buffer() { 20, 0, 0, 0 },
+                    },                
+                },
             },
         })
     }

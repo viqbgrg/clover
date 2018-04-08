@@ -42,7 +42,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_RMCF", 0)
         //    Name(IGPI, Ones)
         // Or to set a custom ig-platform-id, example:
         //    Name(IGPI, 0x01660008)
-//        Name(IGPI, 0)
+        Name(IGPI, 0x59120000)
 
         // DPTS: For laptops only: set to 1 if you want to enable and
         //  disable the DGPU _PTS and _WAK.

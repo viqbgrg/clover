@@ -43,7 +43,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "UIAC-ALL", 0)
         {
             "8086_a12f", Package()
             {
-                "port-count", Buffer() { 10, 0, 0, 0 },
+                "port-count", Buffer() { 26, 0, 0, 0 },
                 "ports", Package()
                 {
                     "HS01", Package()

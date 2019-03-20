@@ -1,0 +1,104 @@
+7:490  2:762  Found UEFI Acpi 2.0 RSDP at 660C5000
+7:490  0:000  Saving ACPI tables from RSDP 660C5000 to EFI\CLOVER\ACPI\origin ...
+7:490  0:000   660C5000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+7:510  0:019    (Xsdt: 660C5098, Rsdt: 660C5028)
+7:510  0:000    660C5098: 'XSDT', 'A M I', Rev: 1, Len: 172 -> XSDT.aml
+7:529  0:018    660C5028: 'RSDT', 'A M I', Rev: 1, Len: 104 -> RSDT.aml
+7:557  0:028    Tables in Xsdt: 17
+7:557  0:000    0. 660E0198: 'FACP', 'A M I', Rev: 5, Len: 268 -> FACP.aml
+7:578  0:020        (Dsdt: 660C51D8, Facs: 66353F80, XDsdt: 660C51D8, XFacs: 0)
+7:578  0:000        660C51D8: 'DSDT', 'A M I', Rev: 2, Len: 110527 -> DSDT.aml
+7:599  0:020        66353F80: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+7:616  0:017    1. 660E02A8: 'APIC', 'A M I', Rev: 3, Len: 188 -> APIC.aml
+7:634  0:017    2. 660E0368: 'FPDT', 'A M I', Rev: 1, Len: 68 -> FPDT.aml
+7:655  0:020    3. 660E03B0: 'FIDT', 'A M I', Rev: 1, Len: 156 -> FIDT.aml
+7:673  0:018    4. 660E0450: 'MCFG', 'A M I', Rev: 1, Len: 60 -> MCFG.aml
+7:691  0:017    5. 660E0490: 'HPET', 'A M I', Rev: 1, Len: 56 -> HPET.aml
+7:709  0:018    6. 660E04C8: 'SSDT', 'PtidDevc', Rev: 1, Len: 4352 -> SSDT-0-PtidDevc.aml
+7:727  0:017    7. 660E15C8: 'DBGP', '', Rev: 1, Len: 52 -> DBGP.aml
+7:744  0:017    8. 660E1600: 'DBG2', '', Rev: 0, Len: 84 -> DBG2.aml
+7:763  0:018    9. 660E1658: 'SSDT', 'SaSsdt', Rev: 2, Len: 22561 -> SSDT-1-SaSsdt.aml
+7:781  0:018    10. 660E6E80: 'UEFI', '', Rev: 1, Len: 66 -> UEFI.aml
+7:799  0:017    11. 660E6EC8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699 -> SSDT-2-CpuSsdt.aml (Found hidden SSDT 7 pcs)
+7:817  0:017        * 653C3698: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1500  53 53 44 54 DC 05 00 00 02 F7 50 6D 52 65 66 00 Internal length = 1500 -> SSDT-x2_0-Cpu0Ist.aml
+7:837  0:020        * 653C2618: 'SSDT', 'ApIst', Rev: 2, Len: 1450  53 53 44 54 AA 05 00 00 02 CE 50 6D 52 65 66 00 Internal length = 1450 -> SSDT-x2_1-ApIst.aml
+7:855  0:017        * 653C2C18: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 895  53 53 44 54 7F 03 00 00 02 65 50 6D 52 65 66 00 Internal length = 895 -> SSDT-x2_2-Cpu0Cst.aml
+7:872  0:017        * 658C9C18: 'SSDT', 'ApCst', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 EA 50 6D 52 65 66 00 Internal length = 281 -> SSDT-x2_3-ApCst.aml
+7:891  0:018        * 64028718: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 142  53 53 44 54 8E 00 00 00 02 2B 50 6D 52 65 66 00 Internal length = 142 -> SSDT-x2_4-Cpu0Hwp.aml
+7:909  0:017        * 6402FA98: 'SSDT', 'ApHwp', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 FD 50 6D 52 65 66 00 Internal length = 281 -> SSDT-x2_5-ApHwp.aml
+7:929  0:020        * 6402F918: 'SSDT', 'HwpLvt', Rev: 2, Len: 304  53 53 44 54 30 01 00 00 02 85 50 6D 52 65 66 00 Internal length = 304 -> SSDT-x2_6-HwpLvt.aml
+7:948  0:018  
+7:948  0:000    12. 660E7D40: 'BGRT', 'A M I', Rev: 1, Len: 56 -> BGRT.aml
+7:965  0:017    13. 660E7D78: 'SSDT', 'SgPeg', Rev: 2, Len: 159 -> SSDT-3-SgPeg.aml
+7:983  0:017    14. 660E7E18: 'DMAR', 'SKL', Rev: 1, Len: 168 -> DMAR.aml
+8:001  0:017    15. 660E7EC0: 'SSDT', 'OptTabl', Rev: 1, Len: 6835 -> SSDT-4-OptTabl.aml
+8:020  0:019    16. 660E9978: 'ASF!', ' HCG', Rev: 32, Len: 165 -> ASF!.aml
+8:051  0:030    Tables in Rsdt: 17
+8:051  0:000    0. 660C5150: 'FACP', 'A M I', Rev: 2, Len: 132 -> RSDT-FACP.aml
+8:068  0:017        (Dsdt: 660C51D8, Facs: 66353F40)
+8:068  0:000        660C51D8: 'DSDT', 'A M I', Rev: 2, Len: 110527
+8:070  0:001        66353F40: 'FACS', Ver: 0, Len: 64 -> RSDT-FACS.aml
+8:091  0:020    1. 660E02A8: 'APIC', 'A M I', Rev: 3, Len: 188
+8:091  0:000    2. 660E0368: 'FPDT', 'A M I', Rev: 1, Len: 68
+8:091  0:000    3. 660E03B0: 'FIDT', 'A M I', Rev: 1, Len: 156
+8:091  0:000    4. 660E0450: 'MCFG', 'A M I', Rev: 1, Len: 60
+8:091  0:000    5. 660E0490: 'HPET', 'A M I', Rev: 1, Len: 56
+8:091  0:000    6. 660E04C8: 'SSDT', 'PtidDevc', Rev: 1, Len: 4352
+8:091  0:000    7. 660E15C8: 'DBGP', '', Rev: 1, Len: 52
+8:091  0:000    8. 660E1600: 'DBG2', '', Rev: 0, Len: 84
+8:091  0:000    9. 660E1658: 'SSDT', 'SaSsdt', Rev: 2, Len: 22561
+8:091  0:000    10. 660E6E80: 'UEFI', '', Rev: 1, Len: 66
+8:091  0:000    11. 660E6EC8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+8:091  0:000    12. 660E7D40: 'BGRT', 'A M I', Rev: 1, Len: 56
+8:091  0:000    13. 660E7D78: 'SSDT', 'SgPeg', Rev: 2, Len: 159
+8:091  0:000    14. 660E7E18: 'DMAR', 'SKL', Rev: 1, Len: 168
+8:091  0:000    15. 660E7EC0: 'SSDT', 'OptTabl', Rev: 1, Len: 6835
+8:091  0:000    16. 660E9978: 'ASF!', ' HCG', Rev: 32, Len: 165
+8:091  0:000  Found UEFI Acpi 1.0 RSDP at 660C5000
+8:091  0:000  Printing ACPI tables from RSDP 660C5000 ...
+8:091  0:000   660C5000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+8:091  0:000    (Xsdt: 660C5098, Rsdt: 660C5028)
+8:091  0:000    660C5098: 'XSDT', 'A M I', Rev: 1, Len: 172
+8:091  0:000    660C5028: 'RSDT', 'A M I', Rev: 1, Len: 104
+8:091  0:000    Tables in Xsdt: 17
+8:091  0:000    0. 660E0198: 'FACP', 'A M I', Rev: 5, Len: 268
+8:091  0:000        (Dsdt: 660C51D8, Facs: 66353F80, XDsdt: 660C51D8, XFacs: 0)
+8:091  0:000        660C51D8: 'DSDT', 'A M I', Rev: 2, Len: 110527
+8:092  0:001        66353F80: 'FACS', Ver: 2, Len: 64
+8:092  0:000    1. 660E02A8: 'APIC', 'A M I', Rev: 3, Len: 188
+8:092  0:000    2. 660E0368: 'FPDT', 'A M I', Rev: 1, Len: 68
+8:092  0:000    3. 660E03B0: 'FIDT', 'A M I', Rev: 1, Len: 156
+8:092  0:000    4. 660E0450: 'MCFG', 'A M I', Rev: 1, Len: 60
+8:092  0:000    5. 660E0490: 'HPET', 'A M I', Rev: 1, Len: 56
+8:092  0:000    6. 660E04C8: 'SSDT', 'PtidDevc', Rev: 1, Len: 4352
+8:092  0:000    7. 660E15C8: 'DBGP', '', Rev: 1, Len: 52
+8:092  0:000    8. 660E1600: 'DBG2', '', Rev: 0, Len: 84
+8:092  0:000    9. 660E1658: 'SSDT', 'SaSsdt', Rev: 2, Len: 22561
+8:092  0:000    10. 660E6E80: 'UEFI', '', Rev: 1, Len: 66
+8:092  0:000    11. 660E6EC8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+8:092  0:000    12. 660E7D40: 'BGRT', 'A M I', Rev: 1, Len: 56
+8:092  0:000    13. 660E7D78: 'SSDT', 'SgPeg', Rev: 2, Len: 159
+8:092  0:000    14. 660E7E18: 'DMAR', 'SKL', Rev: 1, Len: 168
+8:092  0:000    15. 660E7EC0: 'SSDT', 'OptTabl', Rev: 1, Len: 6835
+8:092  0:000    16. 660E9978: 'ASF!', ' HCG', Rev: 32, Len: 165
+8:092  0:000    Tables in Rsdt: 17
+8:092  0:000    0. 660C5150: 'FACP', 'A M I', Rev: 2, Len: 132
+8:092  0:000        (Dsdt: 660C51D8, Facs: 66353F40)
+8:092  0:000        660C51D8: 'DSDT', 'A M I', Rev: 2, Len: 110527
+8:093  0:001        66353F40: 'FACS', Ver: 0, Len: 64
+8:093  0:000    1. 660E02A8: 'APIC', 'A M I', Rev: 3, Len: 188
+8:093  0:000    2. 660E0368: 'FPDT', 'A M I', Rev: 1, Len: 68
+8:093  0:000    3. 660E03B0: 'FIDT', 'A M I', Rev: 1, Len: 156
+8:093  0:000    4. 660E0450: 'MCFG', 'A M I', Rev: 1, Len: 60
+8:093  0:000    5. 660E0490: 'HPET', 'A M I', Rev: 1, Len: 56
+8:093  0:000    6. 660E04C8: 'SSDT', 'PtidDevc', Rev: 1, Len: 4352
+8:093  0:000    7. 660E15C8: 'DBGP', '', Rev: 1, Len: 52
+8:093  0:000    8. 660E1600: 'DBG2', '', Rev: 0, Len: 84
+8:093  0:000    9. 660E1658: 'SSDT', 'SaSsdt', Rev: 2, Len: 22561
+8:093  0:000    10. 660E6E80: 'UEFI', '', Rev: 1, Len: 66
+8:093  0:000    11. 660E6EC8: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+8:093  0:000    12. 660E7D40: 'BGRT', 'A M I', Rev: 1, Len: 56
+8:093  0:000    13. 660E7D78: 'SSDT', 'SgPeg', Rev: 2, Len: 159
+8:093  0:000    14. 660E7E18: 'DMAR', 'SKL', Rev: 1, Len: 168
+8:093  0:000    15. 660E7EC0: 'SSDT', 'OptTabl', Rev: 1, Len: 6835
+8:093  0:000    16. 660E9978: 'ASF!', ' HCG', Rev: 32, Len: 165

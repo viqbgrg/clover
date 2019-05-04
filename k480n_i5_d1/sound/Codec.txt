@@ -1,0 +1,8 @@
+[   12.680078] snd_hda_codec_realtek hdaudioC0D0: autoconfig for ALC269VC: line_outs=1 (0x14/0x0/0x0/0x0/0x0) type:speaker
+[   12.680081] snd_hda_codec_realtek hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   12.680082] snd_hda_codec_realtek hdaudioC0D0:    hp_outs=1 (0x15/0x0/0x0/0x0/0x0)
+[   12.680083] snd_hda_codec_realtek hdaudioC0D0:    mono: mono_out=0x0
+[   12.680084] snd_hda_codec_realtek hdaudioC0D0:    inputs:
+[   12.680086] snd_hda_codec_realtek hdaudioC0D0:      Internal Mic=0x19
+[   12.680087] snd_hda_codec_realtek hdaudioC0D0:      Mic=0x18
+

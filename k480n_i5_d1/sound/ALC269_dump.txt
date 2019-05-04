@@ -1,0 +1,32 @@
+
+Verbs from Linux Codec Dump File: /Volumes/macfile/workspace/clover/k480n_i5_d1/sound/codec#0
+
+Codec: Realtek ALC269VC   Address: 0   DevID: 283902569 (0x10ec0269)
+
+   Jack   Color  Description                  Node     PinDefault             Original Verbs
+--------------------------------------------------------------------------------------------------------
+    1/8   Black  Speaker at Ext Rear         18 0x12   0x411111f0   01271cf0 01271d11 01271e11 01271f41
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c10 01471d01 01471e17 01471f90
+    1/8   Black  HP Out at Ext Right         21 0x15   0x0421101f   01571c1f 01571d10 01571e21 01571f04
+    1/8   Black  Speaker at Ext Rear         23 0x17   0x411111f0   01771cf0 01771d11 01771e11 01771f41
+                 Mic at Ext Right            24 0x18   0x04a11820   01871c20 01871d18 01871ea1 01871f04  
+                 Mic at Int N/A              25 0x19   0x90a7092f   01971c2f 01971d09 01971ea7 01971f90  
+    1/8   Black  Speaker at Ext Rear         26 0x1a   0x411111f0   01a71cf0 01a71d11 01a71e11 01a71f41
+    1/8   Black  Speaker at Ext Rear         27 0x1b   0x411111f0   01b71cf0 01b71d11 01b71e11 01b71f41
+Optical  Purple  Line Out at Ext N/A         29 0x1d   0x4005822d   01d71c2d 01d71d82 01d71e05 01d71f40
+    1/8   Black  Speaker at Ext Rear         30 0x1e   0x411111f0   01e71cf0 01e71d11 01e71e11 01e71f41
+--------------------------------------------------------------------------------------------------------
+
+
+   Jack   Color  Description                  Node     PinDefault             Modified Verbs
+--------------------------------------------------------------------------------------------------------
+ Analog Unknown  Speaker at Int N/A          20 0x14   0x90170110   01471c10 01471d00 01471e17 01471f90
+    1/8   Black  HP Out at Ext Right         21 0x15   0x0421101f   01571c30 01571d10 01571e21 01571f00
+ Mic at Ext Right    0x18 0x18                        77666336 01871c20 01871d10     01871ea1 01871f00  
+ Mic at Int N/A    0x19 0x19                        2426865967 01971c40 01971d00     01971ea7 01971f90  
+Optical  Purple  Line Out at Ext N/A         29 0x1d   0x4005822d   01d71c50 01d71d80 01d71e05 01d71f40
+--------------------------------------------------------------------------------------------------------
+
+Modified Verbs in One Line: 01471c10 01471d00 01471e17 01471f90 01571c30 01571d10 01571e21 01571f00 01871c20 01871d10 01871ea1 01871f00 01971c40 01971d00 01971ea7 01971f90 01d71c50 01d71d80 01d71e05 01d71f40
+--------------------------------------------------------------------------------------------------------
+

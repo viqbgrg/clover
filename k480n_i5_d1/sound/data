@@ -3,8 +3,8 @@ Node    c  d  e  f  Description
    14   10 01 17 90  Speaker at Int N/A   
    15   10 10 21 04  HP Out at Ext Right  
    17   f0 00 00 40  Speaker at Ext Rear  
-   18   20 10 a1 02  Mic at Ext Right     
-   19   20 01 a7 90  Mic at Int N/A       
+   18   20 10 a1 04  Mic at Ext Right     04a11820
+   19   20 01 a7 90  Mic at Int N/A       90a7092f
    1a   f0 00 00 40  Speaker at Ext Rear  
    1b   f0 00 00 40  Speaker at Ext Rear  
    1d   f0 00 00 40  Line Out at Ext N/A  
@@ -15,7 +15,7 @@ Node    c  d  e  f  Description
 01471c10 01471d01 01471e17 01471f90 01470c02
 01571c10 01571d10 01571e21 01571f04 01570c02
 01771cf0 01771d00 01771e00 01771f40
-01871c20 01871d10 01871ea1 01871f02
+01871c20 01871d10 01871ea1 01871f04
 01971c20 01971d01 01971ea7 01971f90
 01a71cf0 01a71d00 01a71e00 01a71f40
 01b71cf0 01b71d00 01b71e00 01b71f40
@@ -33,6 +33,7 @@ Node    c  d  e  f  Description
 01B71CF0 01B71D00 01B71E00 01B71F40 
 01E71C70 01E71D11 01E71E44 01E71F02  
 
+12 对应着19
 
 14   20 13 3     
 

@@ -124,6 +124,8 @@
 				<false/>
 				<key>FixHDA</key>
 				<false/>
+				<key>FixShutdown</key>
+				<false/>
 			</dict>
 			<key>Name</key>
 			<string>DSDT.aml</string>
@@ -342,9 +344,9 @@
 				<false/>
 				<key>PStates</key>
 				<false/>
+				<key>PluginType</key>
+				<false/>
 			</dict>
-			<key>PluginType</key>
-			<string>1</string>
 		</dict>
 	</dict>
 	<key>Boot</key>
@@ -358,7 +360,7 @@
 		<key>#XMPDetection</key>
 		<string>-1</string>
 		<key>Arguments</key>
-		<string>-lilubeta shikigva=12 darkwake=0 -xcpm -disablegfxfirmware -igfxbeta</string>
+		<string>darkwake=0 shikigva=12 -disablegfxfirmware</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -398,6 +400,10 @@
 		<key>#Type</key>
 		<string>0x0201</string>
 		<key>#UseARTFrequency</key>
+		<true/>
+		<key>HWPEnable</key>
+		<true/>
+		<key>UseARTFrequency</key>
 		<true/>
 	</dict>
 	<key>Devices</key>
@@ -900,28 +906,47 @@
 		<true/>
 		<key>KernelPm</key>
 		<true/>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				ILniAAAADzA=
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Replace</key>
+				<data>
+				ILniAAAAkJA=
+				</data>
+			</dict>
+		</array>
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>USB 10.13.4+ by PMHeart</string>
+				<string>disable port limit in XHCI kext (credit PMHeart) 10.13.6</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				g32UDw+DlwQAAA==
+				g32IDw+DpwQAAA==
 				</data>
 				<key>InfoPlistPatch</key>
 				<false/>
 				<key>MatchOS</key>
-				<string>10.13.x</string>
+				<string>10.13.6</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
 				<data>
-				g32UD5CQkJCQkA==
+				g32ID5CQkJCQkA==
 				</data>
 			</dict>
 		</array>
@@ -1051,31 +1076,33 @@
 		<key>#Version</key>
 		<string>1.0</string>
 		<key>BiosReleaseDate</key>
-		<string>08/08/2017</string>
+		<string>09/28/2018</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM183.88Z.0151.B00.1708080034</string>
+		<string>IM183.88Z.F000.B00.1809280842</string>
 		<key>Board-ID</key>
 		<string>Mac-77F17D7DA9285301</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C0240360HMAFD47A0</string>
+		<string>C02751501J9J0DX8C</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>iMac18,2</string>
+		<string>1.0</string>
 		<key>ChassisAssetTag</key>
 		<string>iMac-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>166.0.0.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE136</string>
+		<string>0xFC0FE137</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFF1FFF3F</string>
 		<key>LocationInChassis</key>
@@ -1089,7 +1116,9 @@
 		<key>ProductName</key>
 		<string>iMac18,2</string>
 		<key>SerialNumber</key>
-		<string>C02M4DWJF5V7</string>
+		<string>C02VV6Y4J1G5</string>
+		<key>SmUUID</key>
+		<string>1873CAC7-531A-4B95-AD10-87C4AA9099AC</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
